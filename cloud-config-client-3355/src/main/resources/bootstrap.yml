@@ -1,0 +1,31 @@
+server:
+  port: 3355
+spring:
+  application:
+    name: cloud-client-config
+  cloud:
+    config:
+      label: master # 哪个分支
+      name: config  # 什么名字
+      profile: dev  # 名字-xxx  什么环境
+      uri: http://localhost:3344  # 配置中心地址
+      # 上面的进行拼接后位: http://localhost:3344/master/config-dev.yaml
+
+#rabbitmq相关配置<--------------------------
+  rabbitmq:
+    host: 101.200.131.204
+    port: 5672
+    username: guest
+    password: guest
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
+
+# 暴漏监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
