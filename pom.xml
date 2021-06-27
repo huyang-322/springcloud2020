@@ -30,6 +30,7 @@
       <module>cloudali-provider-payment9002</module>
       <module>cloudali-consumer-order83</module>
       <module>cloudali-config-nacos-client3377</module>
+      <module>cloudali-sentinal-service8401</module>
   </modules>
 
   <packaging>pom</packaging>
