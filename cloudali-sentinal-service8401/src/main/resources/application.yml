@@ -13,6 +13,15 @@ spring:
         #配置Sentinel dashboard地址
         dashboard: localhost:8080
         port: 8719
+      datasource: #<---------------------------关注点，添加Nacos数据源配置
+        ds1:
+          nacos:
+            server-addr: localhost:8848
+            dataId: cloudali-sentinel-service
+            groupId: DEFAULT_GROUP
+            data-type: json
+            rule-type: flow
+
 management:
   endpoints:
     web:
